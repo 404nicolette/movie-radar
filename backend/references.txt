@@ -1,0 +1,4 @@
+serialisation: https://www.geeksforgeeks.org/serializers-django-rest-framework/
+reset password: https://docs.djangoproject.com/en/5.1/topics/auth/default/ 
+
+

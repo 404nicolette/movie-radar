@@ -1,0 +1,9 @@
+npm install react-router-dom
+npm install bootstrap
+npm install axios
+npm i react-simple-star-rating
+npm i ogl
+npm install tailwindcss @tailwindcss/vite
+
+
+
