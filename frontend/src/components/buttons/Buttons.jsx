@@ -12,5 +12,12 @@ const Base = ({children, className="", ...props }) => {
 
     )
 }
-const Buttons = {Base}
+
+const NavBtn = ({children, className="", ...props})=>{
+    return(
+        <div {...props}
+            className='w-full p-4 text-center bg-[#370e0e] text-[#e6dcdd] font-varuna hover:bg-[#c31111] my-1 rounded-xl cursor-pointer'>{children}</div>
+    )
+}
+const Buttons = {Base, NavBtn}
 export default Buttons

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
+import NavBar from "./components/Nav/NavBar";
 function App() {
   
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register-page" element={<Register />} />
 
         <Route path="/signin-page" element={<SignIn />} />
+        <Route path="/test" element={<NavBar />} />
        
 
 {/* 

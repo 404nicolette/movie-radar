@@ -1,13 +1,13 @@
 import React from 'react'
 import Text from '../components/text/Text'
-
+import { useNavigate } from 'react-router-dom'
 import Buttons from '../components/buttons/Buttons'
 function SignIn() {
+    const navigate = useNavigate();
 
-    
-
-
-
+    const toLanding=()=>{
+        navigate("/")
+    }
 
 
     return (
@@ -16,7 +16,7 @@ function SignIn() {
         {/* LEFT/TOP */}
             <div className="w-full h-full border-[#a70d1c] border-x-4 border-t-4 rounded-t-2xl flex flex-col items-end justify-end p-2
                         xl:border-b-4 xl:border-r-0 xl:rounded-t-none xl:rounded-l-2xl xl:w-1/2">
-            <Text.H1 className='text-[#e6dcdd] text-[0.5rem] mb-1 mr-5 hover:scale-110 transition'>MOVIE RADAR</Text.H1>
+            <Text.H1 onClick={toLanding} className='text-[#e6dcdd] text-[0.5rem] mb-1 mr-5 hover:scale-110 transition cursor-pointer'>MOVIE RADAR</Text.H1>
             <Text.H1 className="text-[#e6dcdd] text-[1.5rem] md:text-[2rem]">SIGN IN.</Text.H1>
         </div>
 
@@ -54,7 +54,8 @@ function SignIn() {
                     <span className="text-sm">
                         REMEMBER ME
                     </span>
-                    <Text.H5 className='text-gray-500 hover:text-[#a70d1c] text-[0.7rem] w-full'>NEED TO REGISTER?</Text.H5>
+                    <br/>
+                    <a href="/register-page" className='text-gray-500 hover:text-[#a70d1c] text-[0.7rem] w-full cursor-pointer'>NEED TO REGISTER?</a>
                     </label>
                 </div>
                 
