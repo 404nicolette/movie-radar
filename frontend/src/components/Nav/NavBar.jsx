@@ -11,20 +11,18 @@ function NavBar() {
         navigate("/films")
     }
     
-    const toGenres=()=>{
-        navigate("/genres")
+    const toHome=()=>{
+        navigate("/home")
     }
 
     const toPlaylist=()=>{
         navigate("/playlist")
     }
 
-    const toTopRated=()=>{
-        navigate("/top-films")
-    }
+
 
     const toSignOut=()=>{
-        navigate("/goodbye")
+        navigate("/")
     }
 
     // for mobile
@@ -57,9 +55,8 @@ function NavBar() {
             {isOpen && (
                <div className="mt-4 flex flex-col justify-between py-2 lg:hidden"> 
                     <ul className='space-y-1 cursor-pointer'>
-                        <li onClick={toFilms} className="block text-[#cfc9ca]">FILMS</li>
-                        <li onClick={toGenres} className="block text-[#cfc9ca]">GENRES</li>
-                        <li onClick={toTopRated} className="block text-[#cfc9ca]">TOP RATED</li>
+                        <li onClick={toFilms} className="block text-[#cfc9ca]">HOME</li>
+                        <li onClick={toHome} className="block text-[#cfc9ca]">FILMS</li>
                         <li onClick={toPlaylist} className="block text-[#cfc9ca]">PLAYLIST</li>
                     </ul>
 
@@ -92,16 +89,15 @@ function NavBar() {
 
         {/* desktop */}
         
-            <nav className='hidden from-[#370e0e] to-[#1a1717] bg-linear-to-t rounded-3xl lg:flex lg:flex-col lg:justify-start lg:items-center lg:w-[25%] lg:h-screen border-2 border-amber-400 p-5'>
-               
+            <nav className='hidden from-[#370e0e] to-[#1a1717] bg-linear-to-t rounded-3xl lg:flex lg:flex-col lg:justify-start lg:items-center lg:w-full lg:h-full p-2'>
+                <br/>
+                <br/>
                 <Text.H1 className='text-[#e6dcdd] lg:text-center lg:text-[1.5rem] py-5'>MOVIE RADAR</Text.H1>
                 <br/>
                 <ul className='flex flex-col text-[#cfc9ca] cursor-pointer py-5 w-full text-center'>
-                    <li className='py-5 hover:bg-[#c3111131] rounded-xl' onClick={toFilms}>FILMS</li>
-                    <li className='py-5 hover:bg-[#c3111131] rounded-xl' onClick={toGenres}>GENRES</li>
-                    <li className='py-5 hover:bg-[#c3111131] rounded-xl' onClick={toTopRated}>TOP RATED</li>
-                    <li className='py-5 hover:bg-[#c3111131] rounded-xl' onClick={toPlaylist}>PLAYLIST</li>
-                    <li className='py-5 hover:bg-[#c3111131] rounded-xl' onClick={toSignOut}>SIGN OUT</li>
+                    <li className='py-5 hover:bg-[#c3111131] rounded-xl ' onClick={toFilms}>HOME</li>
+                    <li className='py-5 hover:bg-[#c3111131] rounded-xl '  onClick={toHome}>FILMS</li>
+                    <li className='py-5 hover:bg-[#c3111131] rounded-xl ' onClick={toPlaylist}>PLAYLIST</li>
                 </ul>
 
                 <div className="flex justify-end items-end h-full w-full">
