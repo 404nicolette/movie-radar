@@ -30,20 +30,23 @@ function TopBanner() {
   }, []);
 
   return (
-    <div className='border-4 border-[#a70d1c] h-[20%] lg:h-[35%] w-full relative'>
+    <div className='h-[20%] lg:h-[35%] w-full relative '>
       {bannerTitle &&(
-        <div className='z-20 absolute bottom-0 left-0 text-white lg:px-5 px-2 opacity-85'>
-          <Text.H5 className='lg:text-[2rem]'>{bannerTitle}</Text.H5>
+        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-10'>
+          <Text.H5 className='md:text-[1rem] '>Now on Movie Radar</Text.H5>
+          <Text.H5 className='md:text-[3rem] '>{bannerTitle}</Text.H5>
       </div>
 
       )}
-
+      
       {bannerImg &&(
         <img
           src={`https://image.tmdb.org/t/p/original${bannerImg}`}
           alt="Now Playing movie"
-          className="w-full h-full object-cover z-10 absolute"/>
+          className="w-full h-full object-cover absolute"/>
       )}
+       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#190909] to-transparent z-20"></div>
+       {/* from-[#291010] to-[#150505] */}
     </div>
   );
 }
